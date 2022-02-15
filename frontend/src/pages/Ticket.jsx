@@ -123,7 +123,7 @@ function Ticket() {
         </form>
       </Modal>
 
-
+      {console.log(notes)}
       {notes.map((note) => (
         <NoteItem key={note._id} note={note} />
       ))}

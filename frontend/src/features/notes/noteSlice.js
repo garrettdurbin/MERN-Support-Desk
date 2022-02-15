@@ -2,14 +2,14 @@ import {createSlice, createAsyncThunk} from '@reduxjs/toolkit'
 import noteService from './noteService'
 
 const initialState = {
-  note: [],
+  notes: [],
   isError: false,
   isSuccess: false,
   isLoading: false,
   message: '',
 }
 
-// Get user ticket
+// Get ticket notes
 export const getNotes = createAsyncThunk(
   'notes/getAll',
   async (ticketId, thunkAPI) => {
