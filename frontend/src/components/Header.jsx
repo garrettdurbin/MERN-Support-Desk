@@ -1,4 +1,4 @@
-import { FaSignInAlt, FaSignOutAlt, FaUser } from 'react-icons/fa'
+import { FaSignInAlt, FaSignOutAlt, FaUser, FaHome } from 'react-icons/fa'
 import { Link, useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { logout, reset } from '../features/auth/authSlice'
@@ -20,6 +20,13 @@ function Header() {
         <Link to='/'>Support Desk</Link>
       </div>
       <ul>
+
+        <li>
+          <a href="https://garrettdurbin.com/work.html">
+            <FaHome />Portfolio
+          </a>
+        </li>
+
         {user ? (
           <li>
             <button className="btn" onClick={onLogout}><FaSignOutAlt /> Logout</button>
